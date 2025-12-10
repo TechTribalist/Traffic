@@ -1,0 +1,15 @@
+{
+  "buildCommand": "pnpm build:client",
+  "outputDirectory": "dist/public",
+  "framework": "vite",
+  "installCommand": "pnpm install",
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ],
+  "env": {
+    "NODE_ENV": "production"
+  }
+}
