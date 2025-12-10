@@ -10,7 +10,13 @@
     "start": "NODE_ENV=production node dist/index.js",
     "preview": "vite preview --host",
     "check": "tsc --noEmit",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "compile": "npx hardhat compile",
+    "test:contracts": "npx hardhat test",
+    "deploy:sepolia": "npx hardhat run scripts/deploy.js --network sepolia",
+    "check:balance": "npx hardhat run scripts/check-balance.js --network sepolia",
+    "check:roles": "npx hardhat run scripts/check-roles.js --network sepolia",
+    "grant:admin": "npx hardhat run scripts/grant-admin.js --network sepolia"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",
@@ -86,6 +92,7 @@
     "add": "^2.0.6",
     "autoprefixer": "^10.4.20",
     "chai": "^6.2.1",
+    "dotenv": "^17.2.3",
     "esbuild": "^0.25.0",
     "ethereum-waffle": "^4.0.10",
     "ethers": "5.7.2",
